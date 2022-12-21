@@ -32,7 +32,7 @@ function run() {
     var _a;
     try {
         const prBody = (_a = github.context.payload.pull_request) === null || _a === void 0 ? void 0 : _a.body;
-        if ((prBody === null || prBody === void 0 ? void 0 : prBody.includes("[ ]")) === false) {
+        if ((prBody === null || prBody === void 0 ? void 0 : prBody.includes("[ ]")) === true) {
             core.setFailed("Not all the tasks have been completed");
         }
     }
