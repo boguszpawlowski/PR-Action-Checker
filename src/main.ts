@@ -4,7 +4,7 @@ import * as github from '@actions/github'
 function run(): void {
   try {
     const prBody = github.context.payload.pull_request?.body
-    if (prBody?.includes("[ ]") === false) {
+    if (prBody?.includes("[ ]") === true) {
       core.setFailed("Not all the tasks have been completed")
     }
 
